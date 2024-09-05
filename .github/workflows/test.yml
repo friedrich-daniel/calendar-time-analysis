@@ -11,4 +11,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12.5'
+      - shell: bash
+        env:
+          SECRET_PWD_CAL: ${{ secrets.SecretPwdCal }}
+        run: |
+          wget https://4dEZ54Cdjr6AiR2:"$SECRET_PWD_CAL"@nextcloud.blocbox.de/public.php/webdav  -O test.cal
       - run: python main.py
