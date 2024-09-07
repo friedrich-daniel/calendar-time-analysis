@@ -15,5 +15,5 @@ jobs:
         env:
           SECRET_PWD_CAL: ${{ secrets.SecretPwdCal }}
         run: |
-          wget https://4dEZ54Cdjr6AiR2:"$SECRET_PWD_CAL"@nextcloud.blocbox.de/public.php/webdav  -O test.cal
+          wget https://4dEZ54Cdjr6AiR2:"$SECRET_PWD_CAL"@nextcloud.blocbox.de/public.php/webdav  -O test.ics
       - run: python main.py
