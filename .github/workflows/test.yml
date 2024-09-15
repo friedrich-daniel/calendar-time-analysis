@@ -1,4 +1,4 @@
-name: run main.py
+name: test calendar-time-analysis.py
 
 on:
   workflow_dispatch
@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: '3.12.5'
       - name: Install pip dependencies
-        run: pip install pytz
+        run: pip install pytz icalendar
       - shell: bash
         env:
           SECRET_PWD_CAL: ${{ secrets.SecretPwdCal }}
