@@ -47,6 +47,8 @@ if args.file is None:
                 args.file = f
                 break
 
+cw = None
+
 if args.dstart is None or args.dend is None:
     args.dstart = date.fromisoformat(date.today().strftime('%G-W%V') + '-1')
     args.dend = date.fromisoformat(date.today().strftime('%G-W%V') + '-7')
